@@ -12,13 +12,13 @@ export default function Hero() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/60 backdrop-blur dark:bg-gray-900/60 px-3 py-1 text-xs text-gray-700 dark:text-gray-200">
             <span className="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
-            Available for full-time roles
+            Open to full-time roles • 2025 Graduate
           </div>
           <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
-            AI Engineer | Machine Learning Specialist
+            Building Robust Intelligent Systems with Deep Learning and Computer Vision.
           </h1>
           <p className="mt-4 text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-2xl">
-            Building intelligent systems with a focus on Deep Learning and MLOps. I design production-ready models, streamline data pipelines, and ship reliable AI features.
+            B.Tech in Computer Science and Engineering (2025) with hands-on experience in PyTorch, Keras, and MLOps principles.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -39,11 +39,11 @@ export default function Hero() {
 
         <div className="mt-12 md:mt-16 flex items-center gap-6">
           <div className="h-16 w-16 rounded-full ring-2 ring-white/30 overflow-hidden">
-            <div className="h-full w-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white font-semibold">AE</div>
+            <div className="h-full w-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white font-semibold">CB</div>
           </div>
           <div className="text-sm text-gray-800/90 dark:text-gray-200/90">
-            <p className="font-medium">Alex Edwards</p>
-            <p>San Francisco, CA • Open to Remote</p>
+            <p className="font-medium">CHANDRASHEKHAR B</p>
+            <p>Fresher AI Engineer • <a href="mailto:bchandrashekharr619@gmail.com" className="underline hover:no-underline">bchandrashekharr619@gmail.com</a></p>
           </div>
         </div>
       </div>

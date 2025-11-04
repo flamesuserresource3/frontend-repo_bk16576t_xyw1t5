@@ -1,19 +1,23 @@
-import { Cpu, Database, Cloud, Code } from 'lucide-react';
+import { Cpu, Tool, Code2, Award, Briefcase } from 'lucide-react';
 
 export default function SkillsAbout() {
-  const skills = [
+  const groups = [
     {
-      icon: <Code size={18} />, title: 'Languages', items: ['Python', 'TypeScript/JavaScript', 'SQL']
+      icon: <Cpu size={18} />, title: 'ML/AI Core', items: ['CNNs', 'SVM', 'Data Analysis', 'Model Evaluation']
     },
     {
-      icon: <Cpu size={18} />, title: 'Frameworks/Libraries', items: ['PyTorch', 'TensorFlow', 'scikit-learn', 'FastAPI', 'NumPy/Pandas']
+      icon: <Tool size={18} />, title: 'Frameworks & Tools', items: ['PyTorch', 'Keras', 'OpenCV', 'Generative AI (OCI Certified)']
     },
     {
-      icon: <Cloud size={18} />, title: 'Cloud/DevOps', items: ['AWS', 'GCP', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions']
+      icon: <Code2 size={18} />, title: 'Programming & DevOps', items: ['Python', 'C', 'Java', 'Data Structures', 'Advanced Algorithms']
     },
-    {
-      icon: <Database size={18} />, title: 'Data/Storage', items: ['PostgreSQL', 'BigQuery', 'Snowflake', 'MongoDB', 'Redis']
-    },
+  ];
+
+  const certifications = [
+    'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
+    'AI Machine Learning Engineer (Certified Training) (NCVET/NASSCOM Level 5 NCF credits)',
+    'Neural Networks and Deep Learning (Coursera)',
+    'Python Programming - Technical Hub Pvt. Ltd.',
   ];
 
   return (
@@ -21,10 +25,10 @@ export default function SkillsAbout() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Skills & Tech Stack</h2>
-          <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-2xl">Pragmatic tool selection, strong fundamentals, and production-first engineering.</p>
+          <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-2xl">Hands-on with modern ML tooling and strong CS fundamentals.</p>
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {skills.map((group) => (
+            {groups.map((group) => (
               <div key={group.title} className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-gray-900/70 backdrop-blur p-4">
                 <div className="flex items-center gap-2 text-gray-900 dark:text-white">
                   <span className="text-indigo-500">{group.icon}</span>
@@ -38,20 +42,34 @@ export default function SkillsAbout() {
               </div>
             ))}
           </div>
+
+          <div id="experience" className="mt-10">
+            <div className="flex items-center gap-2">
+              <Briefcase size={18} className="text-indigo-500" />
+              <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Experience</h2>
+            </div>
+            <div className="mt-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-gray-900/70 backdrop-blur p-4">
+              <p className="text-sm text-gray-800 dark:text-gray-200"><span className="font-semibold">AI & Data Science Intern</span> • Aqmenz Automation Pvt. Ltd.</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">September 2023 – November 2023</p>
+              <ul className="list-disc pl-5 mt-2 text-sm text-gray-700 dark:text-gray-300">
+                <li>Contributed to end-to-end AI project development, including data preprocessing, model training, and deployment.</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div id="about" className="lg:pl-4">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">About</h2>
-          <p className="mt-2 text-gray-600 dark:text-gray-300">
-            I’m an AI Engineer focused on taking models from notebooks to production. My work spans problem framing, data strategy, model development, and MLOps. I value clear metrics, reliable systems, and tight feedback loops.
-          </p>
-          <div className="mt-6 space-y-4">
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/70 dark:bg-gray-900/70">
-              <p className="text-sm text-gray-700 dark:text-gray-300"><span className="font-semibold text-gray-900 dark:text-white">Recent:</span> Led deployment of a real-time voice agent reducing intent latency from 900ms to 250ms, driving +18% task success.</p>
-            </div>
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/70 dark:bg-gray-900/70">
-              <p className="text-sm text-gray-700 dark:text-gray-300"><span className="font-semibold text-gray-900 dark:text-white">Previously:</span> Built CV anomaly detection with active learning, decreasing false positives by 32% over 3 months.</p>
-            </div>
+        <div className="lg:pl-4" id="certifications">
+          <div className="flex items-center gap-2">
+            <Award size={18} className="text-indigo-500" />
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Certifications</h2>
+          </div>
+          <div className="mt-4 space-y-3">
+            {certifications.map((c) => (
+              <div key={c} className="flex items-start gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-3 bg-white/70 dark:bg-gray-900/70">
+                <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300 text-[11px]">★</span>
+                <p className="text-sm text-gray-800 dark:text-gray-200">{c}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
